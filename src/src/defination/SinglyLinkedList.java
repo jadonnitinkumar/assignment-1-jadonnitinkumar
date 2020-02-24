@@ -3,6 +3,9 @@ package defination;
 import adt.SinglyADT;
 
 public class SinglyLinkedList<E>implements SinglyADT<E>{
+    private int size = 0;
+    private Node<E> head = null;
+
     @Override
     public void add(E item) {
 
@@ -35,7 +38,6 @@ public class SinglyLinkedList<E>implements SinglyADT<E>{
             this.data = data;
             this.next = next;
         }
-
 
         public E getData(){
             return data;
