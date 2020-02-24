@@ -46,11 +46,24 @@ public class SinglyLinkedList<E>implements SinglyADT<E>{
     }
 
     @Override
+    public void remove() {
+
+    }
+
     public void removeFirst() {
         if (head == null){
             throw new IndexOutOfBoundsException(Integer.toString(size));
         } else {
             head = head.next;
+            size--;
+        }
+    }
+
+    public void removeAfter(Node<E> node){
+        if(node.next == null) {
+            throw new IndexOutOfBoundsException(Integer.toString(size));
+        } else {
+            node.next = node.next.getNext();
             size--;
         }
     }
