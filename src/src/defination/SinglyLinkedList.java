@@ -37,6 +37,13 @@ public class SinglyLinkedList<E>implements SinglyADT<E>{
         }
 
 
+        public E getData(){
+            return data;
+        }
+        public  Node<E> getNext(){
+            return next;
+        }
+
         @Override
         public int compareTo(E o) {
             return 0;
