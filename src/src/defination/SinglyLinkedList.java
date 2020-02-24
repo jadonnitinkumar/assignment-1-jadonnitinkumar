@@ -107,16 +107,25 @@ public class SinglyLinkedList<E>implements SinglyADT<E>{
                         current.data = index.data;
                         index.data = temp;
                     }
+                    index = index.next;
                 }
+                current = current.next;
             }
         }
-
     }
 
     @Override
     public void print() {
-
+        Node<E> response = head;
+        System.out.println("-----Here are all your Contacts------");
+        for(int i=0 ; i<size; i++) {
+            E data = response.getData();
+            response = response.getNext();
+            System.out.println(data);
+        }
     }
+
+
     private static class Node<E> implements Comparable<E>{
         private E data;
         private Node<E> next;
