@@ -24,8 +24,12 @@ public class Person implements Comparable<Person>{
         this.list = list;
     }
 
-    public  String getfName(){
+    public  String getfName() {
         return fName;
+    }
+
+    public String getlName() {
+        return lName;
     }
 
     @Override
