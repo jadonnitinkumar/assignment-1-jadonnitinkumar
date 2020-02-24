@@ -32,6 +32,10 @@ public class Person implements Comparable<Person>{
         return lName;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
     @Override
     public int compareTo(Person o) {
         return 0;
