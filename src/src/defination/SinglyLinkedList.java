@@ -27,4 +27,11 @@ public class SinglyLinkedList<E>implements SinglyADT<E>{
     public void print() {
 
     }
+    private static class Node<E> implements Comparable<E>{
+
+        @Override
+        public int compareTo(E o) {
+            return 0;
+        }
+    }
 }
