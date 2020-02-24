@@ -35,8 +35,8 @@ public class SinglyLinkedList<E>implements SinglyADT<E>{
     public void add(int index, E item){
         if(index == 0) {
             addFirst(item);
-        } else{
-            addAfter(getNode(index-1),item);
+        } else {
+            addAfter(getNode(index - 1), item);
         }
     }
 
