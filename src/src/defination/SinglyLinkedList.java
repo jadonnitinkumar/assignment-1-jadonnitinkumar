@@ -100,6 +100,14 @@ public class SinglyLinkedList<E>implements SinglyADT<E>{
         } else{
             while (current != null ) {
                 index = current.next;
+
+                while(index != null) {
+                    if((current.data).equals(index.data)) {
+                        temp = (E) current.data;
+                        current.data = index.data;
+                        index.data = temp;
+                    }
+                }
             }
         }
 
