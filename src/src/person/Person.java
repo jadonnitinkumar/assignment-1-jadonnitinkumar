@@ -40,6 +40,10 @@ public class Person implements Comparable<Person>{
         return phoneNumber;
     }
 
+    public  List<Long> getList() {
+        return list;
+    }
+
     @Override
     public int compareTo(Person o) {
         return 0;
