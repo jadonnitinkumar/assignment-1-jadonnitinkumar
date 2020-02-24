@@ -22,7 +22,7 @@ public class Main {
                     "Press 4 to delete a contact\n" +
                     "Press 5 to exit programm");
             int choice = scanner.nextInt();
-            /*scanner.nextLine();
+            scanner.nextLine();
             switch (choice) {
                 case 1:
                     addContact(list, list1, list2);
@@ -40,7 +40,7 @@ public class Main {
                 case 5:
                     flag = false;
                     break;
-            }*/
+            }
         } while (flag);
     }
 
@@ -100,6 +100,29 @@ public class Main {
         System.out.println(list1.get(i - 1) + "'s contact deleted from list!");
         list1.remove(i - 1);
         list2.remove(i - 1);
+        return list;
+    }
+
+    public static SinglyLinkedList searchContact(SinglyLinkedList list, ArrayList list2) {
+        System.out.println("You could search for a contact from their first names:");
+        Scanner scanner = new Scanner(System.in);
+        String fName = scanner.nextLine();
+        int k = 0;
+        for (int i = 0; i < list2.size(); i++) {
+            if (fName.equals(list2.get(i))) {
+                k++;
+            }
+        }
+        if (k == 0) {
+            System.out.println("NO RESULTS FOUND!");
+        } else {
+            System.out.println(k + " match found!");
+            for (int i = 0; i < list2.size(); i++) {
+                if (fName.equals(list2.get(i))) {
+                    list.print(i + 1);
+                }
+            }
+        }
         return list;
     }
 }

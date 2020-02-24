@@ -45,11 +45,6 @@ public class SinglyLinkedList<E>implements SinglyADT<E>{
         add(size, item);
     }
 
-    @Override
-    public void remove() {
-        remove(size);
-    }
-
     public void removeFirst() {
         if (head == null){
             throw new IndexOutOfBoundsException(Integer.toString(size));
@@ -76,6 +71,11 @@ public class SinglyLinkedList<E>implements SinglyADT<E>{
         } else{
             removeAfter(getNode(index -2));
         }
+    }
+
+    @Override
+    public void remove() {
+        remove(size);
     }
 
     @Override
@@ -124,6 +124,18 @@ public class SinglyLinkedList<E>implements SinglyADT<E>{
             System.out.println(data);
         }
     }
+
+    public void print(int index) {
+        Node<E> response = head;
+        for (int i = 0; i < index; i++) {
+            E data = response.getData();
+            response = response.getNext();
+            if (i == index - 1) {
+                System.out.println(data);
+            }
+        }
+    }
+
 
 
     private static class Node<E> implements Comparable<E>{

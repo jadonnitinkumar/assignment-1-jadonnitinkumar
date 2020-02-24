@@ -82,7 +82,25 @@ public class Person implements Comparable<Person>{
     }
 
     @Override
-    public int compareTo(Person o) {
-        return 0;
+    public int compareTo(Person person) {
+        return fName.compareTo(person.fName);
+
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == this) {
+            return true;
+        }
+        if (obj == null || obj.getClass() != this.getClass()) {
+            return false;
+        }
+        Person guest = (Person) obj;
+        return fName.compareToIgnoreCase(guest.fName) >= 1;
     }
 }
