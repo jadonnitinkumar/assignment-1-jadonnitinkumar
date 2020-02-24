@@ -24,6 +24,10 @@ public class Person implements Comparable<Person>{
         this.list = list;
     }
 
+    public  String getfName(){
+        return fName;
+    }
+
     @Override
     public int compareTo(Person o) {
         return 0;
